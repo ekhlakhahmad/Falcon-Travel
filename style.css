@@ -5,13 +5,125 @@ body {
     color: #333;
 }
 
-header {
+/* header {
     background: #004aad;
     color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 40px;
+} */
+
+/* Header Base */
+header {
+    background-color: #0b3d91;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    padding: 10px 40px;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+/* Nav Menu */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 24px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #0b3d91;
+}
+
+/* Hamburger Button */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.menu-toggle span {
+    width: 28px;
+    height: 3px;
+    background: #0b3d91;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    nav {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: white;
+        width: 200px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        display: none;
+        flex-direction: column;
+        padding: 16px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    /* When active */
+    nav.active {
+        display: flex;
+    }
+
+    /* Animation for toggle icon */
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
 }
 
 .logo img {
@@ -43,7 +155,7 @@ nav a:hover {
 .slider {
     position: relative;
     width: 100%;
-    height: 600px;
+    height: 700px;
     overflow: hidden;
 }
 
