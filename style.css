@@ -246,7 +246,6 @@ nav a:hover {
     color: white;
     border: none;
     padding: 10px 20px;
-    margin-bottom: 20px;
     border-radius: 6px;
     cursor: pointer;
 }
@@ -316,6 +315,7 @@ nav a:hover {
 .btn-primary {
     background: #00509e;
     color: #fff;
+    text-decoration: none;
 }
 
 .btn-primary:hover {
