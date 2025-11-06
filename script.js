@@ -18,6 +18,7 @@ menuToggle.addEventListener("click", () => {
 });
 
 // Open popup when 'View Details' is clicked
+// Open popup when 'View Details' is clicked
 const modal = document.getElementById("package-modal");
 const modalTitle = document.getElementById("modal-title");
 const modalDetails = document.getElementById("modal-details");
@@ -38,7 +39,7 @@ document.querySelectorAll(".btn-secondary").forEach((button) => {
       <li>${price}</li>
       <li>${includes}</li>
     `;
-    modalDescription.textContent = `Explore ${title} with Falcon Travel. Enjoy scenic views, local experiences, and comfort stays.`;
+    modalDescription.textContent = `Explore ${title} with Falcon Travel. Enjoy scenic views, local experiences, and comfortable stays.`;
     modal.style.display = "block";
   });
 });

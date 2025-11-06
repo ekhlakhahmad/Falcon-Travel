@@ -5,21 +5,39 @@ body {
     color: #333;
 }
 
-/* header {
-    background: #004aad;
-    color: white;
+/* topbar */
+.topbar {
+    background: #032751;
+    color: #fff;
+    font-size: 14px
+}
+
+.topbar .container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 10px 40px;
-} */
+    justify-content: space-between;
+    padding: 16px 30px
+    }
+    
+    .topbar .top-action {
+        color: #fff;
+        text-decoration: none;
+        margin-left: 12px;
+        padding: 7px 10px;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.06)
+    }
+    
+    .topbar .top-action.whatsapp {
+        background: rgba(0, 0, 0, 0.08)
+    }
 
 /* Header Base */
 header {
     background-color: #0b3d91;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    top: 0;
+    position: absolute;
+        top: 10;
     width: 100%;
     z-index: 999;
     padding: 10px 40px;
@@ -331,6 +349,37 @@ nav a:hover {
     background: #e6c300;
 }
 
+/* services */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 12px;
+    margin-top: 18px
+}
+
+.service-card {
+    background: #fff;
+    padding: 18px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 20px rgba(10, 30, 80, 0.04)
+}
+
+.service-card i {
+    font-size: 28px;
+    color: #0b67d0;
+    margin-bottom: 10px
+}
+
+.container h2 {
+    text-align: center;
+    font-size: 28px;
+    color: #0b67d0;
+    margin-bottom: 8px
+}
 /* ===== Gallery ===== */
 .gallery-section {
     padding: 60px 0;
@@ -355,63 +404,57 @@ nav a:hover {
     transform: scale(1.05);
 }
 
-/* ===== Testimonials Section ===== */
-.testimonials-section {
-    text-align: center;
-    padding: 70px 0;
-    background: #f5f8ff;
-}
-
-.testimonials-section h2 {
-    font-size: 32px;
-    color: #003366;
-    margin-bottom: 40px;
-    font-weight: 700;
-}
-
-.testimonials {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-}
-
-.testimonial-card {
-    background: #fff;
-    border-radius: 16px;
-    padding: 30px 20px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.testimonial-card:hover {
-    transform: translateY(-6px);
-}
-
-.testimonial-card img {
-    width: 90px;
-    height: 90px;
-    object-fit: cover;
+/* floating buttons */
+.whatsapp-float {
+    position: fixed;
+    right: 20px;
+    bottom: 90px;
+    background: #25d366;
+    color: #fff;
+    width: 56px;
+    height: 56px;
     border-radius: 50%;
-    margin-bottom: 16px;
-    border: 3px solid #00509e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 12px 30px rgba(37, 211, 102, 0.18);
+    z-index: 60
 }
 
-.testimonial-card h3 {
-    color: #00509e;
-    margin-bottom: 10px;
-    font-size: 18px;
+.call-float {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background: #0b67d0;
+    color: #fff;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        box-shadow: 0 12px 30px rgba(11, 103, 208, 0.18);
+        z-index: 60
 }
 
-.testimonial-card p {
-    color: #555;
-    font-size: 15px;
-    line-height: 1.6;
+.map-container {
+    text-align: center;
+    padding: 40px 0;
+    background: #f5f9ff;
+}
+
+.map-container h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #004aad;
 }
 
 /* ===== Footer Section ===== */
 
 footer {
-    background: #0b3d91;
+    background: #001e51;
     color: #fff;
     padding: 60px 0 20px;
     font-size: 15px;
@@ -419,7 +462,7 @@ footer {
 
 .footer-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 0 60px;
     max-width: 1400px;
     margin: auto;
@@ -487,106 +530,4 @@ footer {
     padding-top: 15px;
     margin-top: 40px;
     font-size: 14px;
-}
-/* ---------- POPUP / MODAL ---------- */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 999;
-    inset: 0;
-    padding: 60px 15px;
-    background-color: rgba(0, 0, 0, 0.7);
-    overflow-y: auto;
-}
-
-.modal-content {
-    background-color: #fff;
-    margin: auto;
-    padding: 30px 25px;
-    border-radius: 14px;
-    width: 100%;
-    max-width: 600px;
-    position: relative;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-    animation: slideIn 0.3s ease-out;
-}
-
-@keyframes slideIn {
-    from {
-        transform: translateY(-30px);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-.close-btn {
-    position: absolute;
-    top: 14px;
-    right: 18px;
-    font-size: 28px;
-    font-weight: bold;
-    color: #333;
-    cursor: pointer;
-}
-
-.close-btn:hover {
-    color: #0b3d91;
-}
-
-.modal h2 {
-    color: #0b3d91;
-    font-size: 22px;
-    margin-bottom: 12px;
-    text-align: center;
-}
-
-.modal ul {
-    margin: 10px 0 20px;
-    padding-left: 20px;
-    color: #333;
-    line-height: 1.6;
-}
-
-.modal p {
-    color: #555;
-    line-height: 1.6;
-    margin-bottom: 20px;
-    text-align: justify;
-}
-
-.modal .btn-primary {
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-}
-
-/* ✅ Responsive Design */
-@media (max-width: 600px) {
-    .modal-content {
-        padding: 20px 15px;
-        width: 95%;
-        border-radius: 10px;
-    }
-
-    .modal h2 {
-        font-size: 18px;
-    }
-
-    .modal ul {
-        font-size: 14px;
-    }
-
-    .modal p {
-        font-size: 14px;
-    }
-
-    .close-btn {
-        top: 8px;
-        right: 10px;
-        font-size: 24px;
-    }
 }
